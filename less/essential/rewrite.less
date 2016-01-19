@@ -1,0 +1,189 @@
+/* @group Rewrites */
+
+//general
+body,.block .header .title h2, .block h3.main, h1, h2, a{
+  color: #666 !important;
+}
+body i.fa{
+  color: white !important;
+}
+a{
+  outline: none !important;
+}
+a:visited, p.tree_item.branch{
+  color: gray !important;
+}
+h2::before{
+  font-size: 1.1em !important;
+  color: gray !important;
+}
+
+body.has_dock #dock{
+  background-color: #666 !important;
+  .dockedtitle{
+    padding: 0 !important;
+    text-shadow: none !important;
+    background-image: none !important;
+    border: none !important;
+    height: 100px !important;
+    &:hover{
+      background-color: gray !important;
+      h2{
+        color: white !important;
+      }
+    }
+    h2{
+      font-weight: bold !important;
+    }
+  }
+}
+
+//blocks, regions, boxes
+#region-main{
+  border-radius: 0px !important;
+  padding: 10px 20px !important;
+}
+.block{
+  padding: 10px !important;
+  border-radius: 0px !important;
+  .moodle-core-dragdrop-draghandle::before, .icon{
+    color: #F60 !important;
+  }
+  p.tree_item.branch::before{
+    color: #666 !important;
+  }
+}
+.course-content .section-summary{
+  border: none !important;
+}
+.coursebox{
+  border: none !important;
+}
+
+//navs
+.navbar, .navbar-inner{
+  background-color: #F60 !important;
+  a{
+    color: white !important;
+  }
+}
+
+//dropdowns
+.nav{
+  a:hover, a:focus, a:active{
+    color: gray !important;
+    i{
+      color: gray !important;
+    }
+  }
+  li.dropdown.open > .dropdown-toggle{
+    background-color: #333 !important;
+  }
+  .sep{
+    border-bottom: 1px dotted gray !important;
+  }
+  .userpicture{
+    padding: 3px !important;
+    max-width: 14px !important;
+    max-height: 14px !important;
+  }
+}
+
+
+ul.dropdown-menu{
+  background-color: #666 !important;
+  border: none !important;
+  .dropdown-submenu .dropdown-toggle::after{
+    border-left-color: white !important;
+  }
+}
+.dropdown-menu > li > a{
+  color: white !important;
+  i{
+    color: white !important;
+  }
+  &:hover, &:focus, &:active{
+    background-color: #333 !important;
+  }
+}
+
+//buttons
+.breadcrumb-button input[type="submit"]{
+  background-color: #ccc !important;
+  &:hover{
+    background-color: #666 !important;
+    color: white !important;
+  }
+}
+
+//social&others
+body button {
+  &.socialicon {
+    border-radius: 0px !important;
+    background-color: #ddd !important;
+  }
+  &.facebook:hover, &.facebook:focus {
+    background-color: #4a6ea9 !important;
+  }
+  &.twitter:hover, &.twitter:focus {
+    background-color: #00aced !important;
+  }
+}
+#socialheading{
+  color: white !important;
+}
+img.userpicture{
+  box-shadow: none !important;
+}
+
+//calendar
+.today{
+  background-color: #E1E1E1;
+}
+.today a{
+  //color: #F60 !important;
+  font-weight: bold !important;
+}
+
+//footer
+#page-footer{
+  border: none !important;
+  background-color: #333 !important;
+  position: static;
+  bottom: 0;
+}
+
+//responsive
+@media (max-width: 979px) {
+  .navbar{
+    .btn-navbar{
+      display: none !important;
+    }
+    .nav-collapse{
+      clear: none !important;
+      width: auto !important;
+      border: none !important;
+    }
+  }
+  .nav-collapse.collapse{
+    overflow: visible !important;
+  }
+}
+
+@media (max-width: 767px) {
+  #page-header {
+    .btn-icon {
+        display: none !important;
+    }
+  }
+  .container-fluid {
+    padding: 0 20px !important;
+  }
+}
+
+@media (max-width: 480px){
+  .container-fluid {
+    padding: 0 10px !important;
+  }
+}
+/* @end */
