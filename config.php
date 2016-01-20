@@ -57,6 +57,7 @@ if (get_config('theme_essential', 'customscrollbars')) {
     $THEME->sheets[] = 'essential-scrollbars';
 }
 
+$THEME->sheets[] = 'rewrite';
 $THEME->sheets[] = 'custom';
 
 $THEME->supportscssoptimisation = false;
