@@ -271,6 +271,17 @@ module.exports = function(grunt) { // jshint ignore:line
                 src: 'less/essential-alternative.less',
                 dest: 'style/essential-alternative.css'
             },
+            rewrite_p: {
+                options: {
+                    compress: false,
+                    cleancss: false,
+                    paths: "./less",
+                    report: 'min',
+                    sourceMap: false,
+                },
+                src: 'less/rewrite.less',
+                dest: 'style/rewrite.css'
+            },
             essential_d: { // Flipped.
                 options: {
                     compress: false,
@@ -426,6 +437,19 @@ module.exports = function(grunt) { // jshint ignore:line
                 },
                 src: 'less/essential-alternative.less',
                 dest: 'style/essential-alternative.css'
+            },
+            rewrite_d: {
+                options: {
+                    compress: false,
+                    cleancss: false,
+                    paths: "./less",
+                    report: 'min',
+                    sourceMap: true,
+                    sourceMapRootpath: MOODLEURLPREFIX + '/theme/' + THEMEDIR,
+                    sourceMapFilename: 'style/essential-rewrite.treasure.map'
+                },
+                src: 'less/rewrite.less',
+                dest: 'style/rewrite.css'
             }
         },
         exec: {
@@ -617,7 +641,8 @@ module.exports = function(grunt) { // jshint ignore:line
         "less:fontawesome_woff2_" + build,
         "less:fontawesome_no_woff2_" + build,
         "less:fontawesome_" + build,
-        "less:alternative_" + build]);
+        "less:alternative_" + build,
+        "less:rewrite_" + build]);
     if (build == 'd') {
         grunt.registerTask("compile", ["css", "replace:placeholder", "cssflip:rtl_" + build, "bless", 'cssmetrics', "decache"]);
     } else {
