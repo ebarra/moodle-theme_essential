@@ -1,21 +1,17 @@
 /* @group Rewrites */
 
-//general
+
 body,.block .header .title h2, .block h3.main, h1, h2, a{
-  color: #666 !important;
+  color: #666;
 }
 body i.fa{
-  color: white !important;
+  color: white;
 }
 a{
-  outline: none !important;
+  outline: none;
 }
 a:visited, p.tree_item.branch{
-  color: gray !important;
-}
-h2::before{
-  font-size: 1.1em !important;
-  color: gray !important;
+  color: gray;
 }
 
 body.has_dock #dock{
@@ -40,12 +36,21 @@ body.has_dock #dock{
 
 //blocks, regions, boxes
 #region-main{
-  border-radius: 0px !important;
-  padding: 10px 20px !important;
+  border-radius: 0px;
+  padding: 10px 20px;
 }
+
 .block{
   padding: 10px !important;
   border-radius: 0px !important;
+  .header{
+    .title{
+      h2:before{
+        font-size: 1.1em;
+        color: gray;
+      }
+    }
+  }
   .moodle-core-dragdrop-draghandle::before, .icon{
     color: #F60 !important;
   }
@@ -62,7 +67,7 @@ body.has_dock #dock{
 
 //navs
 .navbar, .navbar-inner{
-  background-color: #F60 !important;
+  background-color: #666;
   a{
     color: white !important;
   }
@@ -108,32 +113,41 @@ ul.dropdown-menu{
 }
 
 //buttons
+.breadcrumb.style2{
+  li a{
+    color: gray !important;
+    &:hover{
+      text-decoration: underline;
+      color: black !important;
+    }
+  }
+}
 .breadcrumb-button input[type="submit"]{
-  background-color: #ccc !important;
+  background-color: #ccc;
   &:hover{
-    background-color: #666 !important;
-    color: white !important;
+    background-color: #666;
+    color: white;
   }
 }
 
 //social&others
 body button {
   &.socialicon {
-    border-radius: 0px !important;
-    background-color: #ddd !important;
+    border-radius: 0px;
+    background-color: #ddd;
   }
   &.facebook:hover, &.facebook:focus {
-    background-color: #4a6ea9 !important;
+    background-color: #4a6ea9;
   }
   &.twitter:hover, &.twitter:focus {
-    background-color: #00aced !important;
+    background-color: #00aced;
   }
 }
 #socialheading{
-  color: white !important;
+  color: white;
 }
 img.userpicture{
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 //calendar
@@ -141,14 +155,13 @@ img.userpicture{
   background-color: #E1E1E1;
 }
 .today a{
-  //color: #F60 !important;
-  font-weight: bold !important;
+  font-weight: bold;
 }
 
 //footer
 #page-footer{
-  border: none !important;
-  background-color: #333 !important;
+  border: none;
+  background-color: #333;
   position: static;
   bottom: 0;
 }

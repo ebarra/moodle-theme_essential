@@ -5,21 +5,17 @@ body,
 h1,
 h2,
 a {
-  color: #666 !important;
+  color: #666;
 }
 body i.fa {
-  color: white !important;
+  color: white;
 }
 a {
-  outline: none !important;
+  outline: none;
 }
 a:visited,
 p.tree_item.branch {
-  color: gray !important;
-}
-h2::before {
-  font-size: 1.1em !important;
-  color: gray !important;
+  color: gray;
 }
 body.has_dock #dock {
   background-color: #666 !important;
@@ -41,12 +37,16 @@ body.has_dock #dock .dockedtitle h2 {
   font-weight: bold !important;
 }
 #region-main {
-  border-radius: 0px !important;
-  padding: 10px 20px !important;
+  border-radius: 0px;
+  padding: 10px 20px;
 }
 .block {
   padding: 10px !important;
   border-radius: 0px !important;
+}
+.block .header .title h2:before {
+  font-size: 1.1em;
+  color: gray;
 }
 .block .moodle-core-dragdrop-draghandle::before,
 .block .icon {
@@ -63,7 +63,7 @@ body.has_dock #dock .dockedtitle h2 {
 }
 .navbar,
 .navbar-inner {
-  background-color: #F60 !important;
+  background-color: #666;
 }
 .navbar a,
 .navbar-inner a {
@@ -108,40 +108,47 @@ ul.dropdown-menu .dropdown-submenu .dropdown-toggle::after {
 .dropdown-menu > li > a:active {
   background-color: #333 !important;
 }
+.breadcrumb.style2 li a {
+  color: gray !important;
+}
+.breadcrumb.style2 li a:hover {
+  text-decoration: underline;
+  color: black !important;
+}
 .breadcrumb-button input[type="submit"] {
-  background-color: #ccc !important;
+  background-color: #ccc;
 }
 .breadcrumb-button input[type="submit"]:hover {
-  background-color: #666 !important;
-  color: white !important;
+  background-color: #666;
+  color: white;
 }
 body button.socialicon {
-  border-radius: 0px !important;
-  background-color: #ddd !important;
+  border-radius: 0px;
+  background-color: #ddd;
 }
 body button.facebook:hover,
 body button.facebook:focus {
-  background-color: #4a6ea9 !important;
+  background-color: #4a6ea9;
 }
 body button.twitter:hover,
 body button.twitter:focus {
-  background-color: #00aced !important;
+  background-color: #00aced;
 }
 #socialheading {
-  color: white !important;
+  color: white;
 }
 img.userpicture {
-  box-shadow: none !important;
+  box-shadow: none;
 }
 .today {
   background-color: #E1E1E1;
 }
 .today a {
-  font-weight: bold !important;
+  font-weight: bold;
 }
 #page-footer {
-  border: none !important;
-  background-color: #333 !important;
+  border: none;
+  background-color: #333;
   position: static;
   bottom: 0;
 }
