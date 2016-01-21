@@ -15,6 +15,14 @@
   color: #ffffff;
 }
 /* @end */
+* {
+  outline: none;
+}
+html,
+body,
+#page {
+  height: 100%;
+}
 body,
 .block .header .title h2,
 .block h3.main,
@@ -25,9 +33,6 @@ a {
 }
 body i.fa {
   color: #ffffff;
-}
-* {
-  outline: none;
 }
 a::before {
   color: #333333;
@@ -59,16 +64,30 @@ iframe {
   border: none;
 }
 #page #page-content #region-main {
+  border-radius: 0;
+}
+#page-site-index #page #page-content #region-main {
   background-color: transparent;
   border: none;
 }
-#page #page-content #region-main.desktop-first-column {
-  background-color: white;
-  padding: 10px 20px;
-  border-radius: 0;
+#page-course-index #page #page-content #region-main {
+  padding: 20px;
 }
-#page #page-content #region-main.desktop-first-column .coursetitle {
-  color: #000000;
+#page-course-index #page #page-content #region-main div[role="main"] {
+  margin: 0;
+}
+#page-course-index #page #page-content #region-main div[role="main"] .course_category_tree .category[data-categoryid] {
+  background-color: #bbbbbb;
+  padding: 10px;
+}
+#page-course-index #page #page-content #region-main div[role="main"] .course_category_tree .category[data-categoryid]:hover {
+  background-color: #333333;
+}
+#page-course-index #page #page-content #region-main div[role="main"] .course_category_tree i.fa {
+  font-size: 80px;
+}
+#page-course-index #page #page-content #region-main div[role="main"] .course_category_tree .categoryname a span {
+  color: #ffffff;
 }
 #page #page-content div[role="main"] {
   background-color: transparent;
@@ -228,6 +247,18 @@ input[type="submit"]:hover {
   background-color: #333333;
   color: #ffffff;
 }
+button {
+  color: #ffffff;
+  background-color: #bbbbbb;
+  background-image: none;
+  border: none;
+  text-shadow: none;
+  border-radius: 3px;
+}
+button:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
 body button.socialicon {
   border-radius: 0px;
   background-color: #ddd;
@@ -257,6 +288,7 @@ img.userpicture {
   background-color: #333;
   position: static;
   bottom: 0;
+  display: block;
 }
 @media (max-width: 979px) {
   .navbar .btn-navbar {

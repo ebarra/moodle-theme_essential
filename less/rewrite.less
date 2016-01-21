@@ -3,15 +3,20 @@
 @import "rewrite/variables";
 @import "rewrite/mixins";
 
+*{
+  outline: none;
+}
+
+html, body, #page{
+  height: 100%;
+}
 body,.block .header .title h2, .block h3.main, h1, h2, a{
   color: @gray;
 }
 body i.fa{
   color: @white;
 }
-*{
-  outline: none;
-}
+
 a::before{
   color: @gray_dark;
 
@@ -39,22 +44,39 @@ body.has_dock #dock{
     }
   }
 }
-
 iframe{
   border: none;
 }
-//blocks, regions, boxes
 
+//blocks, regions, boxes
 #page #page-content #region-main{
+  border-radius: 0;
+}
+#page-site-index #page #page-content #region-main{
   background-color: transparent;
   border: none;
 }
-#page #page-content #region-main.desktop-first-column{
-  background-color: white;
-  padding: 10px 20px;
-  border-radius: 0;
-  .coursetitle{
-    color: @black;
+#page-course-index #page #page-content #region-main{
+  padding: 20px;
+  div[role="main"]{
+    margin: 0;
+    .course_category_tree{
+      .category[data-categoryid]{
+        background-color: @gray_mid;
+        padding: 10px;
+        &:hover{
+          background-color: @gray_dark;
+        }
+      }
+      i.fa{
+        font-size: 80px;
+      }
+      .categoryname a{
+        span{
+          color: @white;
+        }
+      }
+    }
   }
 }
 
@@ -192,6 +214,9 @@ ul.dropdown-menu{
 input[type="submit"]{
   .btn-one;
 }
+button{
+  .btn-one;
+}
 
 //social&others
 body button {
@@ -227,6 +252,7 @@ img.userpicture{
   background-color: #333;
   position: static;
   bottom: 0;
+  display:block;
 }
 
 //responsive
