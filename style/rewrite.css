@@ -1,91 +1,163 @@
 /* @group Rewrites */
+/* @variables Rewrite */
+/* @end */
+/* @mixins Rewrite */
+.btn-one {
+  color: #ffffff;
+  background-color: #bbbbbb;
+  background-image: none;
+  border: none;
+  text-shadow: none;
+  border-radius: 3px;
+}
+.btn-one:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+/* @end */
 body,
 .block .header .title h2,
 .block h3.main,
 h1,
 h2,
 a {
-  color: #666;
+  color: #666666;
 }
 body i.fa {
-  color: white;
+  color: #ffffff;
 }
-a {
+* {
   outline: none;
+}
+a::before {
+  color: #333333;
 }
 a:visited,
 p.tree_item.branch {
-  color: gray;
+  color: #666666;
 }
 body.has_dock #dock {
-  background-color: #666 !important;
+  background-color: #666666;
 }
 body.has_dock #dock .dockedtitle {
-  padding: 0 !important;
-  text-shadow: none !important;
-  background-image: none !important;
-  border: none !important;
-  height: 100px !important;
+  padding: 0;
+  text-shadow: none;
+  background-image: none;
+  border: none;
+  height: 100px;
 }
 body.has_dock #dock .dockedtitle:hover {
-  background-color: gray !important;
+  background-color: #666666;
 }
 body.has_dock #dock .dockedtitle:hover h2 {
-  color: white !important;
+  color: #ffffff;
 }
 body.has_dock #dock .dockedtitle h2 {
-  font-weight: bold !important;
+  font-weight: bold;
 }
-#region-main {
-  border-radius: 0px;
+iframe {
+  border: none;
+}
+#page #page-content #region-main {
+  background-color: transparent;
+  border: none;
+}
+#page #page-content #region-main.desktop-first-column {
+  background-color: white;
   padding: 10px 20px;
+  border-radius: 0;
 }
-.block {
-  padding: 10px !important;
-  border-radius: 0px !important;
+#page #page-content #region-main.desktop-first-column .coursetitle {
+  color: #000000;
 }
-.block .header .title h2:before {
+#page #page-content div[role="main"] {
+  background-color: transparent;
+}
+#frontpage-course-list {
+  background: none;
+}
+.jsenabled .block {
+  padding: 10px;
+  border-radius: 0px;
+}
+.jsenabled .block a {
+  color: black;
+  font-weight: 400;
+}
+.jsenabled .block a:hover {
+  color: #ff6600;
+}
+.jsenabled .block .header .title h2 {
+  color: #ff6600;
+}
+.jsenabled .block .header .title h2:before {
   font-size: 1.1em;
-  color: gray;
+  color: #ff6600;
 }
-.block .moodle-core-dragdrop-draghandle::before,
-.block .icon {
-  color: #F60 !important;
+.jsenabled .block .block_tree .tree_item.branch,
+.jsenabled .block .block_tree .tree_item.branch a {
+  color: #333333;
 }
-.block p.tree_item.branch::before {
-  color: #666 !important;
+.jsenabled .block .block_tree .tree_item.branch::before {
+  color: #333333;
+}
+p.tree_item.leaf a,
+p.tree_item.leaf a > i.fa {
+  color: #bbbbbb;
+}
+p.tree_item.leaf a:hover,
+p.tree_item.leaf a > i.fa:hover,
+p.tree_item.leaf a:focus,
+p.tree_item.leaf a > i.fa:focus {
+  color: #ff6600;
 }
 .course-content .section-summary {
-  border: none !important;
+  border: none;
 }
-.coursebox {
-  border: none !important;
+.courses .coursebox {
+  border-radius: 0;
+  padding: 20px;
+}
+.courses .coursebox .info h3 a {
+  color: #000000;
+}
+.course_list .coursebox {
+  border: none;
 }
 .navbar,
 .navbar-inner {
-  background-color: #666;
+  background-color: #666666;
 }
 .navbar a,
 .navbar-inner a {
-  color: white !important;
+  color: #ffffff;
 }
-.nav a:hover,
-.nav a:focus,
-.nav a:active {
-  color: gray !important;
+.navbar .nav a:hover,
+.navbar-inner .nav a:hover,
+.navbar .nav a:focus,
+.navbar-inner .nav a:focus,
+.navbar .nav a:active,
+.navbar-inner .nav a:active {
+  color: #666666 !important;
 }
-.nav a:hover i,
-.nav a:focus i,
-.nav a:active i {
-  color: gray !important;
+.navbar .nav a:hover i,
+.navbar-inner .nav a:hover i,
+.navbar .nav a:focus i,
+.navbar-inner .nav a:focus i,
+.navbar .nav a:active i,
+.navbar-inner .nav a:active i {
+  color: #666666 !important;
 }
-.nav li.dropdown.open > .dropdown-toggle {
-  background-color: #333 !important;
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar-inner .nav li.dropdown.open > .dropdown-toggle {
+  background-color: #333333 !important;
 }
-.nav .sep {
-  border-bottom: 1px dotted gray !important;
+.navbar .nav .sep,
+.navbar-inner .nav .sep {
+  border-bottom: 1px dotted #666666 !important;
 }
-.nav .userpicture {
+.navbar .nav .userpicture,
+.navbar-inner .nav .userpicture {
   padding: 3px !important;
   max-width: 14px !important;
   max-height: 14px !important;
@@ -98,15 +170,20 @@ ul.dropdown-menu .dropdown-submenu .dropdown-toggle::after {
   border-left-color: white !important;
 }
 .dropdown-menu > li > a {
-  color: white !important;
+  color: #e1e1e1 !important;
 }
 .dropdown-menu > li > a i {
-  color: white !important;
+  color: #e1e1e1 !important;
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus,
 .dropdown-menu > li > a:active {
-  background-color: #333 !important;
+  background-color: #333333 !important;
+}
+.dropdown-menu > li > a:hover a,
+.dropdown-menu > li > a:focus a,
+.dropdown-menu > li > a:active a {
+  color: #ffffff;
 }
 .breadcrumb.style2 li a {
   color: gray !important;
@@ -116,11 +193,40 @@ ul.dropdown-menu .dropdown-submenu .dropdown-toggle::after {
   color: black !important;
 }
 .breadcrumb-button input[type="submit"] {
-  background-color: #ccc;
+  color: #ffffff;
+  background-color: #bbbbbb;
+  background-image: none;
+  border: none;
+  text-shadow: none;
+  border-radius: 3px;
 }
 .breadcrumb-button input[type="submit"]:hover {
-  background-color: #666;
-  color: white;
+  background-color: #333333;
+  color: #ffffff;
+}
+.breadcrumb-button .btn-success {
+  color: #ffffff;
+  background-color: #bbbbbb;
+  background-image: none;
+  border: none;
+  text-shadow: none;
+  border-radius: 3px;
+}
+.breadcrumb-button .btn-success:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+input[type="submit"] {
+  color: #ffffff;
+  background-color: #bbbbbb;
+  background-image: none;
+  border: none;
+  text-shadow: none;
+  border-radius: 3px;
+}
+input[type="submit"]:hover {
+  background-color: #333333;
+  color: #ffffff;
 }
 body button.socialicon {
   border-radius: 0px;
@@ -141,7 +247,7 @@ img.userpicture {
   box-shadow: none;
 }
 .today {
-  background-color: #E1E1E1;
+  background-color: #e1e1e1;
 }
 .today a {
   font-weight: bold;

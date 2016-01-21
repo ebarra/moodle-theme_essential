@@ -1,100 +1,156 @@
 /* @group Rewrites */
-
+//imports
+@import "rewrite/variables";
+@import "rewrite/mixins";
 
 body,.block .header .title h2, .block h3.main, h1, h2, a{
-  color: #666;
+  color: @gray;
 }
 body i.fa{
-  color: white;
+  color: @white;
 }
-a{
+*{
   outline: none;
 }
+a::before{
+  color: @gray_dark;
+
+}
 a:visited, p.tree_item.branch{
-  color: gray;
+  color: @gray;
 }
 
 body.has_dock #dock{
-  background-color: #666 !important;
+  background-color: @gray;
   .dockedtitle{
-    padding: 0 !important;
-    text-shadow: none !important;
-    background-image: none !important;
-    border: none !important;
-    height: 100px !important;
+    padding: 0;
+    text-shadow: none;
+    background-image: none;
+    border: none;
+    height: 100px;
     &:hover{
-      background-color: gray !important;
+      background-color: @gray;
       h2{
-        color: white !important;
+        color: @white;
       }
     }
     h2{
-      font-weight: bold !important;
+      font-weight: bold;
     }
   }
 }
 
+iframe{
+  border: none;
+}
 //blocks, regions, boxes
-#region-main{
-  border-radius: 0px;
+
+#page #page-content #region-main{
+  background-color: transparent;
+  border: none;
+}
+#page #page-content #region-main.desktop-first-column{
+  background-color: white;
   padding: 10px 20px;
+  border-radius: 0;
+  .coursetitle{
+    color: @black;
+  }
 }
 
-.block{
-  padding: 10px !important;
-  border-radius: 0px !important;
-  .header{
-    .title{
-      h2:before{
-        font-size: 1.1em;
-        color: gray;
+#page #page-content div[role="main"]{
+  background-color: transparent;
+}
+#frontpage-course-list{
+  background: none;
+}
+.jsenabled{
+  .block{
+    padding: 10px;
+    border-radius: 0px;
+    a{
+      color: black;
+      font-weight: 400;
+      &:hover{
+        color: @orangeprimary;
+      }
+    }
+    .header{
+      .title{
+        h2{
+          color: @orangeprimary;
+        }
+        h2:before{
+          font-size: 1.1em;
+          color: @orangeprimary;
+        }
+      }
+    }
+    .block_tree{
+      .tree_item.branch, .tree_item.branch a{
+        color: @gray_dark;
+      }
+      .tree_item.branch::before{
+        color: @gray_dark;
       }
     }
   }
-  .moodle-core-dragdrop-draghandle::before, .icon{
-    color: #F60 !important;
-  }
-  p.tree_item.branch::before{
-    color: #666 !important;
+}
+p.tree_item.leaf a, p.tree_item.leaf a > i.fa{
+  color: @gray_mid;
+  &:hover, &:focus{
+    color: @orangeprimary;
   }
 }
 .course-content .section-summary{
-  border: none !important;
+  border: none;
 }
-.coursebox{
-  border: none !important;
+.courses{
+  .coursebox{
+    border-radius: 0;
+    padding: 20px;
+    .info{
+      h3 a{
+        color: @black;
+      }
+    }
+  }
+}
+.course_list{
+  .coursebox{
+    border: none;
+  }
 }
 
 //navs
 .navbar, .navbar-inner{
-  background-color: #666;
+  background-color: @gray;
   a{
-    color: white !important;
+    color: @white;
   }
+  .nav{
+    a:hover, a:focus, a:active{
+      color: @gray !important;
+      i{
+        color: @gray !important;
+      }
+    }
+    li.dropdown.open > .dropdown-toggle{
+      background-color: @gray_dark !important;
+    }
+    .sep{
+      border-bottom: 1px dotted @gray !important;
+    }
+    .userpicture{
+      padding: 3px !important;
+      max-width: 14px !important;
+      max-height: 14px !important;
+    }
+  }
+
 }
 
 //dropdowns
-.nav{
-  a:hover, a:focus, a:active{
-    color: gray !important;
-    i{
-      color: gray !important;
-    }
-  }
-  li.dropdown.open > .dropdown-toggle{
-    background-color: #333 !important;
-  }
-  .sep{
-    border-bottom: 1px dotted gray !important;
-  }
-  .userpicture{
-    padding: 3px !important;
-    max-width: 14px !important;
-    max-height: 14px !important;
-  }
-}
-
-
 ul.dropdown-menu{
   background-color: #666 !important;
   border: none !important;
@@ -103,16 +159,19 @@ ul.dropdown-menu{
   }
 }
 .dropdown-menu > li > a{
-  color: white !important;
+  color: @gray_light !important;
   i{
-    color: white !important;
+    color: @gray_light !important;
   }
   &:hover, &:focus, &:active{
-    background-color: #333 !important;
+    background-color: @gray_dark !important;
+    a{
+      color: @white;
+    }
   }
 }
 
-//buttons
+//buttons & inputs
 .breadcrumb.style2{
   li a{
     color: gray !important;
@@ -123,11 +182,15 @@ ul.dropdown-menu{
   }
 }
 .breadcrumb-button input[type="submit"]{
-  background-color: #ccc;
-  &:hover{
-    background-color: #666;
-    color: white;
+  .btn-one;
+}
+.breadcrumb-button{
+  .btn-success{
+    .btn-one;
   }
+}
+input[type="submit"]{
+  .btn-one;
 }
 
 //social&others
@@ -152,10 +215,10 @@ img.userpicture{
 
 //calendar
 .today{
-  background-color: #E1E1E1;
-}
-.today a{
-  font-weight: bold;
+  background-color: @gray_light;
+  a{
+    font-weight: bold;
+  }
 }
 
 //footer
