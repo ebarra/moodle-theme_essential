@@ -2,29 +2,9 @@
 //imports
 @import "rewrite/variables";
 @import "rewrite/mixins";
+@import "rewrite/scaffolding";
 
-*{
-  outline: none;
-}
-
-html, body, #page{
-  height: 100%;
-}
-body,.block .header .title h2, .block h3.main, h1, h2, a{
-  color: @gray;
-}
-body i.fa{
-  color: @white;
-}
-
-a::before{
-  color: @gray_dark;
-
-}
-a:visited, p.tree_item.branch{
-  color: @gray;
-}
-
+//global
 body.has_dock #dock{
   background-color: @gray;
   .dockedtitle{
@@ -44,18 +24,34 @@ body.has_dock #dock{
     }
   }
 }
-iframe{
-  border: none;
-}
 
-//blocks, regions, boxes
+//blocks, regions, boxes, pages
 #page #page-content #region-main{
   border-radius: 0;
 }
-#page-site-index #page #page-content #region-main{
+#page-site-index #page #page-content #region-main,
+#page-enrol-index #page #page-content #region-main{
   background-color: transparent;
   border: none;
 }
+#page-enrol-index #page #page-content #region-main{
+  .generalbox{
+    .coursebox{
+      background-color: @white;
+      border-radius: 0;
+      border: 1px solid @gray_light;
+      padding: 20px;
+    }
+  }
+  .bor{
+    background: none;
+    height: 0;
+  }
+}
+#notice{
+  margin-bottom: 5px;
+}
+
 #page-course-index #page #page-content #region-main{
   padding: 20px;
   div[role="main"]{
@@ -78,6 +74,27 @@ iframe{
       }
     }
   }
+}
+#page-course-index-category #page #page-content #region-main{
+  background-color: transparent;
+  border: none;
+  .categorypicker, #coursesearch{
+    text-align: left;
+    margin: 10px;
+    .invisiblefieldset{
+      display: block;
+      label, #coursesearchbox{
+        margin: 0;
+        padding: 5px;
+      }
+      input[type="submit"]{
+        margin: 0 5px;
+      }
+    }
+  }
+}
+#page-tag-search #page #page-content #region-main{
+  padding: 20px;
 }
 
 #page #page-content div[role="main"]{
@@ -133,7 +150,10 @@ p.tree_item.leaf a, p.tree_item.leaf a > i.fa{
     padding: 20px;
     .info{
       h3 a{
-        color: @black;
+        color: @gray_dark;
+        &:hover{
+          color: @black;
+        }
       }
     }
   }

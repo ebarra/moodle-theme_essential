@@ -18,18 +18,38 @@
 * {
   outline: none;
 }
-html,
-body,
-#page {
-  height: 100%;
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input,
+.form-item .form-description,
+.form-defaultinfo,
+.form-label .form-shortname,
+.mform legend a {
+  color: #333333;
 }
 body,
 .block .header .title h2,
 .block h3.main,
-h1,
 h2,
 a {
   color: #666666;
+}
+h1 {
+  color: #333333;
 }
 body i.fa {
   color: #ffffff;
@@ -40,6 +60,9 @@ a::before {
 a:visited,
 p.tree_item.branch {
   color: #666666;
+}
+iframe {
+  border: none;
 }
 body.has_dock #dock {
   background-color: #666666;
@@ -60,15 +83,26 @@ body.has_dock #dock .dockedtitle:hover h2 {
 body.has_dock #dock .dockedtitle h2 {
   font-weight: bold;
 }
-iframe {
-  border: none;
-}
 #page #page-content #region-main {
   border-radius: 0;
 }
-#page-site-index #page #page-content #region-main {
+#page-site-index #page #page-content #region-main,
+#page-enrol-index #page #page-content #region-main {
   background-color: transparent;
   border: none;
+}
+#page-enrol-index #page #page-content #region-main .generalbox .coursebox {
+  background-color: #ffffff;
+  border-radius: 0;
+  border: 1px solid #e1e1e1;
+  padding: 20px;
+}
+#page-enrol-index #page #page-content #region-main .bor {
+  background: none;
+  height: 0;
+}
+#notice {
+  margin-bottom: 5px;
 }
 #page-course-index #page #page-content #region-main {
   padding: 20px;
@@ -88,6 +122,33 @@ iframe {
 }
 #page-course-index #page #page-content #region-main div[role="main"] .course_category_tree .categoryname a span {
   color: #ffffff;
+}
+#page-course-index-category #page #page-content #region-main {
+  background-color: transparent;
+  border: none;
+}
+#page-course-index-category #page #page-content #region-main .categorypicker,
+#page-course-index-category #page #page-content #region-main #coursesearch {
+  text-align: left;
+  margin: 10px;
+}
+#page-course-index-category #page #page-content #region-main .categorypicker .invisiblefieldset,
+#page-course-index-category #page #page-content #region-main #coursesearch .invisiblefieldset {
+  display: block;
+}
+#page-course-index-category #page #page-content #region-main .categorypicker .invisiblefieldset label,
+#page-course-index-category #page #page-content #region-main #coursesearch .invisiblefieldset label,
+#page-course-index-category #page #page-content #region-main .categorypicker .invisiblefieldset #coursesearchbox,
+#page-course-index-category #page #page-content #region-main #coursesearch .invisiblefieldset #coursesearchbox {
+  margin: 0;
+  padding: 5px;
+}
+#page-course-index-category #page #page-content #region-main .categorypicker .invisiblefieldset input[type="submit"],
+#page-course-index-category #page #page-content #region-main #coursesearch .invisiblefieldset input[type="submit"] {
+  margin: 0 5px;
+}
+#page-tag-search #page #page-content #region-main {
+  padding: 20px;
 }
 #page #page-content div[role="main"] {
   background-color: transparent;
@@ -138,6 +199,9 @@ p.tree_item.leaf a > i.fa:focus {
   padding: 20px;
 }
 .courses .coursebox .info h3 a {
+  color: #333333;
+}
+.courses .coursebox .info h3 a:hover {
   color: #000000;
 }
 .course_list .coursebox {
