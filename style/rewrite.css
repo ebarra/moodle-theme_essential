@@ -335,6 +335,10 @@ body button.twitter:hover,
 body button.twitter:focus {
   background-color: #00aced;
 }
+body button.website:hover,
+body button.website:focus {
+  background-color: #ff6600;
+}
 #socialheading {
   color: white;
 }
@@ -381,4 +385,3 @@ img.userpicture {
   }
 }
 /* @end */
-/*# sourceMappingURL=/theme/essential/style/essential-rewrite.treasure.map */
