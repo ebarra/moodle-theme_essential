@@ -231,6 +231,10 @@ p.tree_item.leaf a > i.fa:focus {
 .navbar-inner .nav a:active i {
   color: #666666 !important;
 }
+.navbar .nav li a,
+.navbar-inner .nav li a {
+  border-right: 1px solid white;
+}
 .navbar .nav li.dropdown.open > .dropdown-toggle,
 .navbar-inner .nav li.dropdown.open > .dropdown-toggle {
   background-color: #333333 !important;
@@ -337,7 +341,7 @@ body button.twitter:focus {
 }
 body button.website:hover,
 body button.website:focus {
-  background-color: #ff6600;
+  background-color: #ff6600CA;
 }
 #socialheading {
   color: white;
