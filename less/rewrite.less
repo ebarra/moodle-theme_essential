@@ -4,6 +4,7 @@
 @import "rewrite/mixins";
 @import "rewrite/scaffolding";
 
+
 //global
 body.has_dock #dock{
   background-color: @gray;
@@ -26,9 +27,35 @@ body.has_dock #dock{
 }
 
 //blocks, regions, boxes, pages
+//------------------------------
+//general styles
 #page #page-content #region-main{
   border-radius: 0;
+  padding: 10px 20px;
 }
+#page{
+  form{
+    #fitem_id_submitbutton,
+    fieldset.hidden:last-of-type #fgroup_id_buttonar,
+    .form-buttons{
+      background-color: @gray_mid;
+      border: none;
+      .fgroup{
+        padding: 0;
+      }
+      input{
+        margin: 0;
+        background-image: none;
+        background-color: @gray_dark;
+        &:hover{
+          background-color: @orangeprimary;
+        }
+      }
+    }
+  }
+}
+
+//page site index
 #page-site-index #page #page-content #region-main,
 #page-enrol-index #page #page-content #region-main{
   background-color: transparent;
@@ -52,6 +79,7 @@ body.has_dock #dock{
   margin-bottom: 5px;
 }
 
+//courses index page
 #page-course-index #page #page-content #region-main{
   padding: 20px;
   div[role="main"]{
@@ -75,6 +103,8 @@ body.has_dock #dock{
     }
   }
 }
+
+//courses category page
 #page-course-index-category #page #page-content #region-main{
   background-color: transparent;
   border: none;
@@ -100,8 +130,30 @@ body.has_dock #dock{
 #page #page-content div[role="main"]{
   background-color: transparent;
 }
+
+//grades
+#page-grade-report-overview-index{
+  #page-content{
+    #region-main{
+      //h2{
+        //font-size: 1em;
+        //padding: 10px;
+        //border: 1px solid gray;
+
+      //}
+    }
+  }
+}
+
+
+
 #frontpage-course-list{
   background: none;
+}
+
+.block_course_overview{
+  border: none;
+  box-shadow: none;
 }
 .jsenabled{
   .block{
@@ -177,11 +229,6 @@ p.tree_item.leaf a, p.tree_item.leaf a > i.fa{
         color: @gray !important;
       }
     }
-    li{
-      a{
-        border-right: 1px solid white;
-      }
-    }
     li.dropdown.open > .dropdown-toggle{
       background-color: @gray_dark !important;
     }
@@ -195,7 +242,26 @@ p.tree_item.leaf a, p.tree_item.leaf a > i.fa{
     }
   }
 }
-
+//nav-tabs
+.nav-tabs > li.active > a{
+  color: @gray_dark;
+  background-color: @white;
+  border: 0;
+  border-bottom: 3px solid @orangeprimary;
+  cursor: default;
+  &:hover{
+    border: 0;
+    border-bottom: 3px solid @orangeprimary;
+  }
+}
+.nav-tabs > li > a{
+  color: @gray_mid;
+  background-color: @white;
+  border: none;
+  &:hover{
+    color: black;
+  }
+}
 //dropdowns
 ul.dropdown-menu{
   background-color: #666 !important;
@@ -238,8 +304,32 @@ ul.dropdown-menu{
 input[type="submit"]{
   .btn-one;
 }
+input[type="button"]{
+  .btn-two;
+}
 button{
   .btn-one;
+}
+.ical-link{
+  font-size: 1em;
+  background-color: #f60;
+  padding: 6px 20px 4px;
+  color: #fff;
+  border-radius: 3px;
+  line-height: 0.8em;
+  border: none;
+}
+.nav_guide{
+  font-weight: bold;
+  color: @orangeprimary;
+}
+.nav_icon{
+  i.fa{
+    color: @gray_light;
+    &:hover{
+      color: @gray_dark !important;
+    }
+  }
 }
 
 //social&others
@@ -315,4 +405,5 @@ img.userpicture{
     padding: 0 10px !important;
   }
 }
+
 /* @end */
