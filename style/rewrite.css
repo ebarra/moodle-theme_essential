@@ -145,6 +145,17 @@ body.has_dock #dock .dockedtitle h2 {
 #page-course-index #page #page-content #region-main div[role="main"] {
   margin: 0;
 }
+#page-course-index #page #page-content #region-main div[role="main"] #coursesearch {
+  text-align: left;
+  margin: 0 0 5px 0;
+  padding: 10px;
+}
+#page-course-index #page #page-content #region-main div[role="main"] #coursesearch .invisiblefieldset {
+  display: block;
+}
+#page-course-index #page #page-content #region-main div[role="main"] #coursesearch .invisiblefieldset label {
+  display: block;
+}
 #page-course-index #page #page-content #region-main div[role="main"] .course_category_tree .category[data-categoryid] {
   background-color: #bbbbbb;
   padding: 10px;
@@ -152,7 +163,7 @@ body.has_dock #dock .dockedtitle h2 {
 #page-course-index #page #page-content #region-main div[role="main"] .course_category_tree .category[data-categoryid]:hover {
   background-color: #333333;
 }
-#page-course-index #page #page-content #region-main div[role="main"] .course_category_tree i.fa {
+#page-course-index #page #page-content #region-main div[role="main"] .course_category_tree .categoryname a i.fa {
   font-size: 80px;
 }
 #page-course-index #page #page-content #region-main div[role="main"] .course_category_tree .categoryname a span {
@@ -274,6 +285,33 @@ p.tree_item.leaf a > i.fa:focus {
 .navbar-inner .nav li.dropdown.open > .dropdown-toggle {
   background-color: #333333 !important;
 }
+.navbar .nav li.dropdown ul.dropdown-menu,
+.navbar-inner .nav li.dropdown ul.dropdown-menu {
+  border-radius: 0;
+  border: 1px solid #333333;
+  padding: 0;
+}
+.navbar .nav li.dropdown ul.dropdown-menu li a,
+.navbar-inner .nav li.dropdown ul.dropdown-menu li a,
+.navbar .nav li.dropdown ul.dropdown-menu li i,
+.navbar-inner .nav li.dropdown ul.dropdown-menu li i {
+  color: #e1e1e1 !important;
+}
+.navbar .nav li.dropdown ul.dropdown-menu li a:hover,
+.navbar-inner .nav li.dropdown ul.dropdown-menu li a:hover,
+.navbar .nav li.dropdown ul.dropdown-menu li i:hover,
+.navbar-inner .nav li.dropdown ul.dropdown-menu li i:hover,
+.navbar .nav li.dropdown ul.dropdown-menu li a:focus,
+.navbar-inner .nav li.dropdown ul.dropdown-menu li a:focus,
+.navbar .nav li.dropdown ul.dropdown-menu li i:focus,
+.navbar-inner .nav li.dropdown ul.dropdown-menu li i:focus,
+.navbar .nav li.dropdown ul.dropdown-menu li a:active,
+.navbar-inner .nav li.dropdown ul.dropdown-menu li a:active,
+.navbar .nav li.dropdown ul.dropdown-menu li i:active,
+.navbar-inner .nav li.dropdown ul.dropdown-menu li i:active {
+  background-color: #333333 !important;
+  color: #ffffff !important;
+}
 .navbar .nav .sep,
 .navbar-inner .nav .sep {
   border-bottom: 1px dotted #666666 !important;
@@ -309,22 +347,6 @@ ul.dropdown-menu {
 }
 ul.dropdown-menu .dropdown-submenu .dropdown-toggle::after {
   border-left-color: white !important;
-}
-.dropdown-menu > li > a {
-  color: #e1e1e1 !important;
-}
-.dropdown-menu > li > a i {
-  color: #e1e1e1 !important;
-}
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus,
-.dropdown-menu > li > a:active {
-  background-color: #333333 !important;
-}
-.dropdown-menu > li > a:hover a,
-.dropdown-menu > li > a:focus a,
-.dropdown-menu > li > a:active a {
-  color: #ffffff;
 }
 .breadcrumb.style2 li a {
   color: gray !important;
@@ -454,6 +476,9 @@ img.userpicture {
   }
   .nav-collapse.collapse {
     overflow: visible !important;
+  }
+  .nav-collapse .nav {
+    float: left;
   }
 }
 @media (max-width: 767px) {

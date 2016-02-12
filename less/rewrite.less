@@ -84,6 +84,17 @@ body.has_dock #dock{
   padding: 20px;
   div[role="main"]{
     margin: 0;
+    #coursesearch{
+      text-align: left;
+      margin: 0 0 5px 0;
+      padding: 10px;
+      .invisiblefieldset{
+        display: block;
+        label{
+          display: block;
+        }
+      }
+    }
     .course_category_tree{
       .category[data-categoryid]{
         background-color: @gray_mid;
@@ -92,10 +103,10 @@ body.has_dock #dock{
           background-color: @gray_dark;
         }
       }
-      i.fa{
-        font-size: 80px;
-      }
       .categoryname a{
+        i.fa{
+          font-size: 80px;
+        }
         span{
           color: @white;
         }
@@ -229,8 +240,25 @@ p.tree_item.leaf a, p.tree_item.leaf a > i.fa{
         color: @gray !important;
       }
     }
+
     li.dropdown.open > .dropdown-toggle{
       background-color: @gray_dark !important;
+    }
+    li.dropdown{
+      ul.dropdown-menu{
+        border-radius: 0;
+        border: 1px solid @gray_dark;
+        padding: 0;
+        li{
+          a, i{
+            color: @gray_light !important;
+            &:hover, &:focus, &:active{
+              background-color: @gray_dark !important;
+              color: @white !important;
+            }
+          }
+        }
+      }
     }
     .sep{
       border-bottom: 1px dotted @gray !important;
@@ -242,6 +270,7 @@ p.tree_item.leaf a, p.tree_item.leaf a > i.fa{
     }
   }
 }
+
 //nav-tabs
 .nav-tabs > li.active > a{
   color: @gray_dark;
@@ -270,18 +299,16 @@ ul.dropdown-menu{
     border-left-color: white !important;
   }
 }
-.dropdown-menu > li > a{
-  color: @gray_light !important;
-  i{
-    color: @gray_light !important;
-  }
-  &:hover, &:focus, &:active{
-    background-color: @gray_dark !important;
-    a{
-      color: @white;
-    }
-  }
-}
+//.dropdown-menu > li > a{
+  //color: @gray_light !important;
+  //i{
+    //color: @gray_light !important;
+  //}
+  //&:hover, &:focus, &:active{
+    //background-color: @gray_dark !important;
+    //color: @white !important;
+  //}
+//}
 
 //buttons & inputs
 .breadcrumb.style2{
@@ -386,6 +413,9 @@ img.userpicture{
   }
   .nav-collapse.collapse{
     overflow: visible !important;
+  }
+  .nav-collapse .nav{
+    float: left;
   }
 }
 
