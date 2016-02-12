@@ -26,7 +26,7 @@
 if ($footerregion) {
     echo '<section id="region-main" class="span12">';
 } else if ($hasboringlayout) {
-    echo '<section id="region-main" class="span9 pull-right">';
+    echo '<section id="region-main" class="span9 pull-left">';
 } else {
     echo '<section id="region-main" class="span9">';
 }

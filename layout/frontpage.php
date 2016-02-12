@@ -161,7 +161,7 @@ if ($enable1alert || $enable2alert || $enable3alert) {
             <section id="<?php echo $regionbsid; ?>">
                 <?php
                 if (\theme_essential\toolbox::get_setting('frontpageblocks')) {
-                    echo '<section id="region-main" class="span9 pull-right">';
+                    echo '<section id="region-main" class="span9 pull-left">';
                 } else {
                     echo '<section id="region-main" class="span9 desktop-first-column">';
                 }

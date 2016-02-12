@@ -31,7 +31,7 @@ body.has_dock #dock{
 //general styles
 #page #page-content #region-main{
   border-radius: 0;
-  padding: 10px 20px;
+  padding: 0px 20px;
 }
 #page{
   form{
@@ -228,45 +228,60 @@ p.tree_item.leaf a, p.tree_item.leaf a > i.fa{
 }
 
 //navs
-.navbar, .navbar-inner{
+//.navbar .navbar-inner .messagemenu ul.nav ul.dropdown-menu li > a:hover .message
+
+.navbar{
   background-color: @gray;
-  a{
-    color: @white;
-  }
-  .nav{
-    a:hover, a:focus, a:active{
-      color: @gray !important;
-      i{
-        color: @gray !important;
+  .navbar-inner{
+    background-color: @gray !important;
+    a{
+      color: @white;
+    }
+    .usermenu{
+      .dropdown{
+        img.userpicture{
+          border: none;
+          border-radius: 0;
+          margin-right: 10px;
+        }
       }
     }
+    //.navbar .navbar-inner .nav li.dropdown ul.dropdown-menu li a
+    .nav{
+      a:hover, i:hover{
+        color: @gray !important;
+      }
+      a:focus, a:active, i:focus, i:active{
+        color: white !important;
+      }
+      li.dropdown.open > .dropdown-toggle{
+        background-color: @gray_dark !important;
+      }
+      li.dropdown{
+        ul.dropdown-menu{
+          border-radius: 0;
+          border: 1px solid @gray_dark;
+          padding: 0;
+          li{
 
-    li.dropdown.open > .dropdown-toggle{
-      background-color: @gray_dark !important;
-    }
-    li.dropdown{
-      ul.dropdown-menu{
-        border-radius: 0;
-        border: 1px solid @gray_dark;
-        padding: 0;
-        li{
-          a, i{
-            color: @gray_light !important;
-            &:hover, &:focus, &:active{
-              background-color: @gray_dark !important;
-              color: @white !important;
+            a, i{
+              color: @gray_light !important;
+              &:hover, &:focus, &:active{
+                background-color: @gray_dark !important;
+                color: @white !important;
+              }
             }
           }
         }
       }
-    }
-    .sep{
-      border-bottom: 1px dotted @gray !important;
-    }
-    .userpicture{
-      padding: 3px !important;
-      max-width: 14px !important;
-      max-height: 14px !important;
+      .sep{
+        border-bottom: 1px dotted @gray !important;
+      }
+      .userpicture{
+        max-width: 22px !important;
+        max-height: 22px !important;
+        margin-right: 10px;
+      }
     }
   }
 }
@@ -299,16 +314,6 @@ ul.dropdown-menu{
     border-left-color: white !important;
   }
 }
-//.dropdown-menu > li > a{
-  //color: @gray_light !important;
-  //i{
-    //color: @gray_light !important;
-  //}
-  //&:hover, &:focus, &:active{
-    //background-color: @gray_dark !important;
-    //color: @white !important;
-  //}
-//}
 
 //buttons & inputs
 .breadcrumb.style2{
@@ -380,6 +385,7 @@ body button {
 }
 img.userpicture{
   box-shadow: none;
+  border-radius: 0;
 }
 
 //calendar

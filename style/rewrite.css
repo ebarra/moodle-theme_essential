@@ -96,7 +96,7 @@ body.has_dock #dock .dockedtitle h2 {
 }
 #page #page-content #region-main {
   border-radius: 0;
-  padding: 10px 20px;
+  padding: 0px 20px;
 }
 #page form #fitem_id_submitbutton,
 #page form fieldset.hidden:last-of-type #fgroup_id_buttonar,
@@ -257,70 +257,58 @@ p.tree_item.leaf a > i.fa:focus {
 .course_list .coursebox {
   border: none;
 }
-.navbar,
-.navbar-inner {
+.navbar {
   background-color: #666666;
 }
-.navbar a,
-.navbar-inner a {
+.navbar .navbar-inner {
+  background-color: #666666 !important;
+}
+.navbar .navbar-inner a {
   color: #ffffff;
 }
-.navbar .nav a:hover,
-.navbar-inner .nav a:hover,
-.navbar .nav a:focus,
-.navbar-inner .nav a:focus,
-.navbar .nav a:active,
-.navbar-inner .nav a:active {
+.navbar .navbar-inner .usermenu .dropdown img.userpicture {
+  border: none;
+  border-radius: 0;
+  margin-right: 10px;
+}
+.navbar .navbar-inner .nav a:hover,
+.navbar .navbar-inner .nav i:hover {
   color: #666666 !important;
 }
-.navbar .nav a:hover i,
-.navbar-inner .nav a:hover i,
-.navbar .nav a:focus i,
-.navbar-inner .nav a:focus i,
-.navbar .nav a:active i,
-.navbar-inner .nav a:active i {
-  color: #666666 !important;
+.navbar .navbar-inner .nav a:focus,
+.navbar .navbar-inner .nav a:active,
+.navbar .navbar-inner .nav i:focus,
+.navbar .navbar-inner .nav i:active {
+  color: white !important;
 }
-.navbar .nav li.dropdown.open > .dropdown-toggle,
-.navbar-inner .nav li.dropdown.open > .dropdown-toggle {
+.navbar .navbar-inner .nav li.dropdown.open > .dropdown-toggle {
   background-color: #333333 !important;
 }
-.navbar .nav li.dropdown ul.dropdown-menu,
-.navbar-inner .nav li.dropdown ul.dropdown-menu {
+.navbar .navbar-inner .nav li.dropdown ul.dropdown-menu {
   border-radius: 0;
   border: 1px solid #333333;
   padding: 0;
 }
-.navbar .nav li.dropdown ul.dropdown-menu li a,
-.navbar-inner .nav li.dropdown ul.dropdown-menu li a,
-.navbar .nav li.dropdown ul.dropdown-menu li i,
-.navbar-inner .nav li.dropdown ul.dropdown-menu li i {
+.navbar .navbar-inner .nav li.dropdown ul.dropdown-menu li a,
+.navbar .navbar-inner .nav li.dropdown ul.dropdown-menu li i {
   color: #e1e1e1 !important;
 }
-.navbar .nav li.dropdown ul.dropdown-menu li a:hover,
-.navbar-inner .nav li.dropdown ul.dropdown-menu li a:hover,
-.navbar .nav li.dropdown ul.dropdown-menu li i:hover,
-.navbar-inner .nav li.dropdown ul.dropdown-menu li i:hover,
-.navbar .nav li.dropdown ul.dropdown-menu li a:focus,
-.navbar-inner .nav li.dropdown ul.dropdown-menu li a:focus,
-.navbar .nav li.dropdown ul.dropdown-menu li i:focus,
-.navbar-inner .nav li.dropdown ul.dropdown-menu li i:focus,
-.navbar .nav li.dropdown ul.dropdown-menu li a:active,
-.navbar-inner .nav li.dropdown ul.dropdown-menu li a:active,
-.navbar .nav li.dropdown ul.dropdown-menu li i:active,
-.navbar-inner .nav li.dropdown ul.dropdown-menu li i:active {
+.navbar .navbar-inner .nav li.dropdown ul.dropdown-menu li a:hover,
+.navbar .navbar-inner .nav li.dropdown ul.dropdown-menu li i:hover,
+.navbar .navbar-inner .nav li.dropdown ul.dropdown-menu li a:focus,
+.navbar .navbar-inner .nav li.dropdown ul.dropdown-menu li i:focus,
+.navbar .navbar-inner .nav li.dropdown ul.dropdown-menu li a:active,
+.navbar .navbar-inner .nav li.dropdown ul.dropdown-menu li i:active {
   background-color: #333333 !important;
   color: #ffffff !important;
 }
-.navbar .nav .sep,
-.navbar-inner .nav .sep {
+.navbar .navbar-inner .nav .sep {
   border-bottom: 1px dotted #666666 !important;
 }
-.navbar .nav .userpicture,
-.navbar-inner .nav .userpicture {
-  padding: 3px !important;
-  max-width: 14px !important;
-  max-height: 14px !important;
+.navbar .navbar-inner .nav .userpicture {
+  max-width: 22px !important;
+  max-height: 22px !important;
+  margin-right: 10px;
 }
 .nav-tabs > li.active > a {
   color: #333333;
@@ -451,6 +439,7 @@ body button.website:focus {
 }
 img.userpicture {
   box-shadow: none;
+  border-radius: 0;
 }
 .today {
   background-color: #e1e1e1;
