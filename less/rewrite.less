@@ -201,9 +201,18 @@ body.has_dock #dock{
         }
       }
     }
+
     .block_tree{
+      ul{
+        ul{
+          //margin: 0 0 0 40px;
+        }
+      }
       .tree_item.branch, .tree_item.branch a{
         color: @gray_dark;
+        &:hover, &:focus, &:active{
+          text-decoration: underline;
+        }
       }
       .tree_item.branch::before{
         color: @gray_dark;
@@ -211,10 +220,13 @@ body.has_dock #dock{
     }
   }
 }
-p.tree_item.leaf a, p.tree_item.leaf a > i.fa{
-  color: @gray_mid;
+
+p.tree_item.leaf a,p.tree_item.leaf a > i.fa{
+  color: @gray_dark;
+  margin-left: 1px;
   &:hover, &:focus{
-    color: @orangeprimary;
+    text-decoration: underline;
+    color: @gray_dark;
   }
 }
 
@@ -271,8 +283,6 @@ body{
 }
 
 //navs
-//.navbar .navbar-inner .messagemenu ul.nav ul.dropdown-menu li > a:hover .message
-
 .navbar{
   background-color: @gray;
   .navbar-inner{

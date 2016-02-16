@@ -239,18 +239,28 @@ body.has_dock #dock .dockedtitle h2 {
 .jsenabled .block .block_tree .tree_item.branch a {
   color: #333333;
 }
+.jsenabled .block .block_tree .tree_item.branch:hover,
+.jsenabled .block .block_tree .tree_item.branch a:hover,
+.jsenabled .block .block_tree .tree_item.branch:focus,
+.jsenabled .block .block_tree .tree_item.branch a:focus,
+.jsenabled .block .block_tree .tree_item.branch:active,
+.jsenabled .block .block_tree .tree_item.branch a:active {
+  text-decoration: underline;
+}
 .jsenabled .block .block_tree .tree_item.branch::before {
   color: #333333;
 }
 p.tree_item.leaf a,
 p.tree_item.leaf a > i.fa {
-  color: #bbbbbb;
+  color: #333333;
+  margin-left: 1px;
 }
 p.tree_item.leaf a:hover,
 p.tree_item.leaf a > i.fa:hover,
 p.tree_item.leaf a:focus,
 p.tree_item.leaf a > i.fa:focus {
-  color: #ff6600;
+  text-decoration: underline;
+  color: #333333;
 }
 .bor {
   background: none;
