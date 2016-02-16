@@ -241,6 +241,21 @@ p.tree_item.leaf a:focus,
 p.tree_item.leaf a > i.fa:focus {
   color: #ff6600;
 }
+.bor {
+  background: none;
+}
+body .course-content ul.topics li.section .content {
+  margin: 10px;
+}
+.course-content ul li.section.main {
+  background: none;
+  border-bottom: 1px solid #ddd;
+}
+.course-content ul li.section.main.current {
+  box-shadow: 2px 2px 12px 0px #ddd;
+  border-radius: 0;
+  border: 1px solid #ddd;
+}
 .course-content .section-summary {
   border: none;
 }
