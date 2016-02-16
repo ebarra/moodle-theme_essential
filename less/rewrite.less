@@ -6,6 +6,19 @@
 
 
 //global
+html, body{
+  height: 100%;
+}
+
+.container-fluid{
+  min-height: 100%;
+}
+
+#page{
+  overflow: auto;
+  padding-bottom: 107px;
+}
+
 body.has_dock #dock{
   background-color: @gray;
   .dockedtitle{
@@ -430,10 +443,14 @@ img.userpicture{
 #page-footer{
   border: none;
   background-color: #333;
-  position: static;
+  position: relative;
+  margin-top: -107px; /* negative value of footer height */
+  height: 107px;
+  clear: both;
   bottom: 0;
   display:block;
 }
+
 
 //responsive
 @media (max-width: 979px) {
