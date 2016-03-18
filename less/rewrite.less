@@ -10,6 +10,13 @@ html, body{
   height: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 20px 10px;
+  }
+a:hover::before{
+  color: black !important;
+}
+
 .container-fluid{
   min-height: 100%;
 }
@@ -251,6 +258,9 @@ body{
     li.section.main{
       background: none;
       border-bottom: 1px solid #ddd;
+      .left{
+        width: 0;
+      }
     }
     li.section.main.current{
       box-shadow:  2px 2px 12px 0px #ddd;
@@ -262,13 +272,14 @@ body{
     border: none;
   }
 }
+
 .courses{
   .coursebox{
     border-radius: 0;
     padding: 20px;
     .info{
       h3 a{
-        color: @gray_dark;
+        //color: @gray_dark;
         &:hover{
           color: @black;
         }
@@ -299,13 +310,13 @@ body{
         }
       }
     }
-    //.navbar .navbar-inner .nav li.dropdown ul.dropdown-menu li a
+
     .nav{
       a:hover, i:hover{
         color: @gray !important;
       }
       a:focus, a:active, i:focus, i:active{
-        color: white !important;
+        color: @gray !important;
       }
       li.dropdown.open > .dropdown-toggle{
         background-color: @gray_dark !important;

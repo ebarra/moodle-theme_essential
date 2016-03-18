@@ -79,6 +79,17 @@ html,
 body {
   height: 100%;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 20px 10px;
+}
+a:hover::before {
+  color: black !important;
+}
 .container-fluid {
   min-height: 100%;
 }
@@ -272,6 +283,9 @@ body .course-content ul.topics li.section .content {
   background: none;
   border-bottom: 1px solid #ddd;
 }
+.course-content ul li.section.main .left {
+  width: 0;
+}
 .course-content ul li.section.main.current {
   box-shadow: 2px 2px 12px 0px #ddd;
   border-radius: 0;
@@ -283,9 +297,6 @@ body .course-content ul.topics li.section .content {
 .courses .coursebox {
   border-radius: 0;
   padding: 20px;
-}
-.courses .coursebox .info h3 a {
-  color: #333333;
 }
 .courses .coursebox .info h3 a:hover {
   color: #000000;
@@ -315,7 +326,7 @@ body .course-content ul.topics li.section .content {
 .navbar .navbar-inner .nav a:active,
 .navbar .navbar-inner .nav i:focus,
 .navbar .navbar-inner .nav i:active {
-  color: white !important;
+  color: #666666 !important;
 }
 .navbar .navbar-inner .nav li.dropdown.open > .dropdown-toggle {
   background-color: #333333 !important;
@@ -524,3 +535,4 @@ img.userpicture {
   }
 }
 /* @end */
+/*# sourceMappingURL=/theme/essential/style/essential-rewrite.treasure.map */
