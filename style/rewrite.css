@@ -87,6 +87,10 @@ h5,
 h6 {
   margin: 20px 10px;
 }
+h4 {
+  color: #F60;
+  margin: 20px 0px;
+}
 a:hover::before {
   color: black !important;
 }
@@ -161,6 +165,10 @@ body.has_dock #dock .dockedtitle h2 {
 #notice {
   margin-bottom: 5px;
 }
+#page-user-preferences #page #page-content #region-main .preferences-groups .preferences-group a:hover {
+  color: black;
+  text-decoration: underline;
+}
 #page-course-index #page #page-content #region-main {
   padding: 20px;
 }
@@ -214,6 +222,44 @@ body.has_dock #dock .dockedtitle h2 {
 #page-course-index-category #page #page-content #region-main .categorypicker .invisiblefieldset input[type="submit"],
 #page-course-index-category #page #page-content #region-main #coursesearch .invisiblefieldset input[type="submit"] {
   margin: 0 5px;
+}
+#page-course-view-topics #page #page-content #region-main .bor {
+  height: 0;
+}
+#page-course-view-topics #page #page-content #region-main .right {
+  padding: 0;
+}
+#page-course-view-topics #page #page-content #region-main .actions a > i.fa {
+  color: #333333;
+}
+#page-course-view-topics #page #page-content #region-main .actions .moodle-actionmenu.show[data-enhanced] .menu a {
+  color: #333333;
+}
+#page-course-view-topics #page #page-content #region-main .actions .moodle-actionmenu.show[data-enhanced] .menu a:hover {
+  background-color: #333333;
+  color: white;
+}
+#page-course-view-topics #page #page-content #region-main .toggle-display.textmenu {
+  background-color: #bbbbbb;
+  padding: 3px 5px;
+  border-radius: 3px;
+  color: white;
+}
+#page-course-view-topics #page #page-content #region-main .toggle-display.textmenu:hover {
+  color: white !important;
+  background-color: #333333;
+  text-decoration: none !important;
+}
+#page-course-view-topics #page #page-content #region-main .toggle-display.textmenu .caret {
+  border-top-color: white;
+}
+#page-course-view-topics #page #page-content #region-main .section li.activity a:hover {
+  text-decoration: underline;
+  color: black;
+}
+#page-question-edit #page #page-content #region-main .categoryquestionscontainer #categoryquestions .iconcol a,
+#page-question-edit #page #page-content #region-main .categoryquestionscontainer #categoryquestions .iconcol i {
+  color: gray !important;
 }
 #page-tag-search #page #page-content #region-main {
   padding: 20px;
@@ -312,6 +358,9 @@ body .course-content ul.topics li.section .content {
 }
 .navbar .navbar-inner a {
   color: #ffffff;
+}
+.navbar .navbar-inner .messagemenu ul.nav ul.dropdown-menu li > a:hover .message {
+  background-color: #333333;
 }
 .navbar .navbar-inner .usermenu .dropdown img.userpicture {
   border: none;

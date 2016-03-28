@@ -12,7 +12,12 @@ html, body{
 
 h1, h2, h3, h4, h5, h6 {
     margin: 20px 10px;
-  }
+}
+h4{
+  color: #F60;
+  margin: 20px 0px;
+}
+
 a:hover::before{
   color: black !important;
 }
@@ -99,6 +104,18 @@ body.has_dock #dock{
   margin-bottom: 5px;
 }
 
+//user preferences
+#page-user-preferences #page #page-content #region-main{
+  .preferences-groups{
+    .preferences-group{
+      a:hover{
+        color: black;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
 //courses index page
 #page-course-index #page #page-content #region-main{
   padding: 20px;
@@ -154,26 +171,65 @@ body.has_dock #dock{
     }
   }
 }
+//course view
+#page-course-view-topics #page #page-content #region-main{
+  .bor{
+    height: 0;
+  }
+  .right{
+    padding: 0;
+  }
+
+  .actions{
+    a > i.fa{
+      color: @gray_dark;
+    }
+    .moodle-actionmenu.show[data-enhanced] .menu a{
+      color: @gray_dark;
+      &:hover{
+        background-color: @gray_dark;
+        color: white;
+      }
+    }
+  }
+  .toggle-display.textmenu{
+    background-color: @gray_mid;
+    padding: 3px 5px;
+    border-radius: 3px;
+    color: white;
+    &:hover{
+      color: white !important;
+      background-color: @gray_dark;
+      text-decoration: none !important;
+    }
+    .caret{
+      border-top-color: white;
+    }
+  }
+  .section li.activity{
+    a:hover{
+      text-decoration: underline;
+      color: black;
+    }
+  }
+}
+//banco de preguntas
+#page-question-edit #page #page-content #region-main{
+  .categoryquestionscontainer{
+    #categoryquestions .iconcol{
+      a, i{
+        color: gray !important;
+      }
+    }
+  }
+}
+
 #page-tag-search #page #page-content #region-main{
   padding: 20px;
 }
 
 #page #page-content div[role="main"]{
   background-color: transparent;
-}
-
-//grades
-#page-grade-report-overview-index{
-  #page-content{
-    #region-main{
-      //h2{
-        //font-size: 1em;
-        //padding: 10px;
-        //border: 1px solid gray;
-
-      //}
-    }
-  }
 }
 
 
@@ -210,11 +266,6 @@ body.has_dock #dock{
     }
 
     .block_tree{
-      ul{
-        ul{
-          //margin: 0 0 0 40px;
-        }
-      }
       .tree_item.branch, .tree_item.branch a{
         color: @gray_dark;
         &:hover, &:focus, &:active{
@@ -279,7 +330,6 @@ body{
     padding: 20px;
     .info{
       h3 a{
-        //color: @gray_dark;
         &:hover{
           color: @black;
         }
@@ -300,6 +350,9 @@ body{
     background-color: @gray !important;
     a{
       color: @white;
+    }
+    .messagemenu ul.nav ul.dropdown-menu li > a:hover .message{
+      background-color: @gray_dark;
     }
     .usermenu{
       .dropdown{
