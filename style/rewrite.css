@@ -145,7 +145,7 @@ body.has_dock #dock .dockedtitle h2 {
 #page form #fitem_id_submitbutton input:hover,
 #page form fieldset.hidden:last-of-type #fgroup_id_buttonar input:hover,
 #page form .form-buttons input:hover {
-  background-color: #ff6600;
+  background-color: #1867b6;
 }
 #page-site-index #page #page-content #region-main,
 #page-enrol-index #page #page-content #region-main {
@@ -283,14 +283,14 @@ body.has_dock #dock .dockedtitle h2 {
   font-weight: 400;
 }
 .jsenabled .block a:hover {
-  color: #ff6600;
+  color: #1867b6;
 }
 .jsenabled .block .header .title h2 {
-  color: #ff6600;
+  color: #1867b6;
 }
 .jsenabled .block .header .title h2:before {
   font-size: 1.1em;
-  color: #ff6600;
+  color: #1867b6;
 }
 .jsenabled .block .block_tree .tree_item.branch,
 .jsenabled .block .block_tree .tree_item.branch a {
@@ -410,12 +410,12 @@ body .course-content ul.topics li.section .content {
   color: #333333;
   background-color: #ffffff;
   border: 0;
-  border-bottom: 3px solid #ff6600;
+  border-bottom: 3px solid #1867b6;
   cursor: default;
 }
 .nav-tabs > li.active > a:hover {
   border: 0;
-  border-bottom: 3px solid #ff6600;
+  border-bottom: 3px solid #1867b6;
 }
 .nav-tabs > li > a {
   color: #bbbbbb;
@@ -506,7 +506,7 @@ button:hover {
 }
 .nav_guide {
   font-weight: bold;
-  color: #ff6600;
+  color: #1867b6;
 }
 .nav_icon i.fa {
   color: #e1e1e1;
@@ -584,3 +584,4 @@ img.userpicture {
   }
 }
 /* @end */
+/*# sourceMappingURL=/theme/vish_moodle-theme_essential/style/essential-rewrite.treasure.map */
