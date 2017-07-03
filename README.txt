@@ -130,7 +130,7 @@ Installation
     theme relies on underlying core code that is out of my control.
  2. Login as an administrator and put Moodle in 'Maintenance Mode' so that there are no users using it bar you as the
     administrator.
- 3. Copy the extracted 'essential' folder to the '/theme/' folder.
+ 3. Copy the extracted 'essential' folder to the '/theme/' folder. Rename the folder to call it "essential"
  4. Go to 'Site administration' -> 'Notifications' and follow standard the 'plugin' update notification.
  5. Select as the theme for the site.
  6. Put Moodle out of Maintenance Mode.
